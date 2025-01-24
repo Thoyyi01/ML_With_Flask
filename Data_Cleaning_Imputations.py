@@ -38,18 +38,21 @@ print("\nDataFrame After Replacing Missing Values with Mode:")
 print(df_filled_mode)
 
 
-data = f
-'Name': ['Alice', 'Bob', 'Alice', 'Charlie', 'Bob'],
-'Age': [25, 30, 25, 35, 30],
-'City': ['hyd', 'goa', 'banglore', 'hyd', 'chennai']
-df = pd. DataFrame (data)
+import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Alice', 'Charlie', 'Bob'],
+    'Age': [25, 30, 25, 35, 30],
+    'City': ['hyd', 'goa', 'banglore', 'hyd', 'chennai']
+}
+df = pd.DataFrame(data)
 print("Original DataFrame:")
 print(df)
-# Identify duplicate rows
+
 duplicates = df[df.duplicated()]
-print("\nIdentified Duplicates: ")
-print (duplicates)
-# Remove duplicates, keeping the first occurrence
+print("\nIdentified Duplicates:")
+print(duplicates)
+
 df_cleaned = df.drop_duplicates()
 print("\nDataFrame After Removing Duplicates:")
-printdf_cleaned)
+print(df_cleaned)
